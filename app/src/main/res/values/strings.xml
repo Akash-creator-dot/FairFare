@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FairFare</string>
+    <string name="img">img</string>
+    <string name="login">Login</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="enter_password">Enter password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign up</string>
+    <string name="show_password">Show Password</string>
+    <string name="signup">SignUp</string>
+    <string name="image">image</string>
+    <string name="already_have_account_login">already_have_account_login</string>
+    <string name="sign_up">sign_up</string>
+    <string name="confirm_password">confirm_password</string>
+    <string name="enter_your_name">enter_your_name</string>
+</resources>
