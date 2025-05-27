@@ -58,19 +58,22 @@
             app:layout_constraintStart_toStartOf="@id/imageView5" />
 
         <!-- Bottom Background -->
+
+        <!-- Email Field -->
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:contentDescription="@string/img"
-            app:layout_constraintTop_toBottomOf="@id/imageView7"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView7"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/rectangle" />
 
-        <!-- Email Field -->
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="0dp"
@@ -197,15 +200,48 @@
         <!-- Signup Link -->
         <TextView
             android:id="@+id/textSignup"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:focusable="true"
             android:text="@string/don_t_have_an_account_sign_up"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@id/btnLogin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btngoogle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/googlelogo"
+            android:text="Google"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnfacebook"
+            app:layout_constraintStart_toStartOf="@+id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@+id/textSignup"
+            app:layout_constraintVertical_bias="0.507" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnfacebook"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/facebook"
+            android:text="FqaceBook"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/btngoogle"
+            app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+            app:layout_constraintStart_toEndOf="@+id/btngoogle"
+            app:layout_constraintTop_toBottomOf="@+id/textSignup"
+            app:layout_constraintTop_toTopOf="@+id/btngoogle"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

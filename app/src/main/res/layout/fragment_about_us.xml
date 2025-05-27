@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/card_background"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AboutUsFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/aboutus"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_aboutus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/untitled_design__7__removebg_preview"
+        app:civ_border_color="#B19090"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_horizontal"
+        android:text="Name"
+        android:textColor="#DEE6AE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/phonenumber"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/phonenumber"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:gravity="center_horizontal"
+        android:text="Phone Number"
+        android:textColor="#DEE6AE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/profilecomplain"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileleave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/profilelogutbtn"
+        tools:layout_editor_absoluteX="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/electrician_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_leave" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/complainselectriciantxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:drawableEnd="@drawable/ic_arrow_forward"
+                    android:text="Ride History"
+                    android:textColor="#DEE6AE"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilecomplain"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/profileleave"
+        tools:layout_editor_absoluteX="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/complaint_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_complaints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:drawableEnd="@drawable/ic_arrow_forward"
+                    android:text="FeedBack and Suggestions"
+                    android:textColor="#DEE6AE"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profilelogutbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:elevation="20dp"
+        app:cardBackgroundColor="#032c48"
+        app:cardCornerRadius="30dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:text="Logout"
+                android:textColor="#ffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

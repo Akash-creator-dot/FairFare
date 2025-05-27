@@ -40,7 +40,10 @@ android {
 }
 
 dependencies {
-
+    implementation("com.airbnb.android:lottie:6.6.6")
+    implementation(libs.play.services.auth)
+    implementation("com.google.android.libraries.places:places:3.3.0")
+    implementation("com.google.android.material:material:1.11.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -53,4 +56,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    //circular image
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
 }
