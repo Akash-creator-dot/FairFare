@@ -67,7 +67,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
                     putExtra("destinationLatitude", destinationLatLng!!.latitude)
                     putExtra("destinationLongitude", destinationLatLng!!.longitude)
                 }
-                startActivity(intent)
+                val intent1 = Intent(requireContext(),SelectMode::class.java);
+                startActivity(intent1)
             }
         }
 
