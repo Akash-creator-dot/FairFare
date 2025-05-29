@@ -25,7 +25,8 @@ public class Comparision extends AppCompatActivity {
         double pickupLng = getIntent().getDoubleExtra("pickupLongitude", 0);
         double dropLat = getIntent().getDoubleExtra("destinationLatitude", 0);
         double dropLng = getIntent().getDoubleExtra("destinationLongitude", 0);
-
+        String rideName = getIntent().getStringExtra("ride_name");
+        String rideDescription = getIntent().getStringExtra("ride_description");
         // Find cards
         olacard = findViewById(R.id.olacard);
         ubercard = findViewById(R.id.ubercard);

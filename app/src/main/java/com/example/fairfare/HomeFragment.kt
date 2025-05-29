@@ -56,19 +56,21 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         destination.setOnClickListener {
             launchAutocomplete(AUTOCOMPLETE_DESTINATION_REQUEST)
         }
-
+        var pickuplocations=pickupLocation.text.toString();
+        var destinations=destination.text.toString();
         findFaresButton.setOnClickListener {
             if (pickupLatLng == null || destinationLatLng == null) {
                 Toast.makeText(requireContext(), "Please select both locations", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(requireContext(), Comparision::class.java).apply {
+                val intent = Intent(requireContext(), SelectMode::class.java).apply {
                     putExtra("pickupLatitude", pickupLatLng!!.latitude)
                     putExtra("pickupLongitude", pickupLatLng!!.longitude)
                     putExtra("destinationLatitude", destinationLatLng!!.latitude)
                     putExtra("destinationLongitude", destinationLatLng!!.longitude)
                 }
-                val intent1 = Intent(requireContext(),SelectMode::class.java);
-                startActivity(intent1)
+                intent.putExtra("pickup", pickuplocations);
+                intent.putExtra("destination", destinations);
+                startActivity(intent)
             }
         }
 

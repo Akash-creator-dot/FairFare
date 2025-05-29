@@ -75,7 +75,7 @@ public class SelectMode extends AppCompatActivity {
             rideImage.setImageResource(rideImages.get(name));
         }
         rideView.setOnClickListener(v -> {
-            if(availability.equals("Available")) {
+            if (availability.equals("Available")) {
                 Intent intent = new Intent(SelectMode.this, RideDetailsActivity.class);
                 intent.putExtra("ride_name", name);
                 intent.putExtra("ride_description", description);
@@ -84,8 +84,8 @@ public class SelectMode extends AppCompatActivity {
                 intent.putExtra("destinationLatitude", getIntent().getDoubleExtra("destinationLatitude", 0.0));
                 intent.putExtra("destinationLongitude", getIntent().getDoubleExtra("destinationLongitude", 0.0));
                 startActivity(intent);
-            }else{
-                Toast.makeText(SelectMode.this,"This is not available",Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(SelectMode.this, "This is not available", Toast.LENGTH_SHORT).show();
             }
         });
 
