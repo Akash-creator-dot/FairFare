@@ -33,5 +33,5 @@ FairFare is a smart ride comparison app built with **Kotlin** and **Firebase** f
 
 | Guide Screen | Compare Rides | User Profile |
 |--------------|---------------|--------------|
-| ![screen1](screenshots/onboarding.png) | ![screen2](screenshots/compare.png) | ![screen3](screenshots/profile.png) |
+|![Image](https://github.com/user-attachments/assets/556b3a15-c90c-4224-ae9e-5a4c712270ed) | ![screen2](screenshots/compare.png) | ![screen3](screenshots/profile.png) |
 
